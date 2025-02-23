@@ -1,381 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Experience top name brands, flexible payment options, free services, and expert advice for your tire and wheel needs.">
-    <title>Ride with Shane at RNR Tires</title>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "AutomotiveBusiness",
-        "name": "RNR Tires",
-        "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
-        "url": "https://www.example.com",  // Replace with your actual URL
-        "telephone": "+1-555-1234567", //Replace with your phone number
-        "image": "URL_TO_YOUR_LOGO_OR_HERO_IMAGE", //  Add a URL to a relevant image
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "123 Main Street",  // Replace with your actual address
-          "addressLocality": "Anytown",      // Replace
-          "addressRegion": "CA",          // Replace
-          "postalCode": "91234",          // Replace
-          "addressCountry": "US"          // Replace
-        }
-     }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Top brands, flexible payments, free services, and expert advice for your tire and wheel needs.">
+  <title>Ride with Shane at RNR Tires</title>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "RNR Tires",
+    "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
+    "url": "https://www.example.com",
+    "telephone": "+1-555-1234567"
+  }
+  </script>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+      color: #e0e0e0;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-    <style>
-        /* Reset & Base Styles */
-        *, *::before, *::after { /* More robust reset */
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    a {
+      color: #ff3333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
-            background-color: #121212; /* Darker background */
-            color: #e0e0e0; /* Lighter text for better contrast */
-            line-height: 1.6;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
+    a:hover {
+      color: #cc0000;
+    }
 
-        a {
-            color: #ff6347; /* Tomato color for links - stands out */
-            text-decoration: none;
-            transition: color 0.2s ease; /* Smooth color transition */
-        }
-        a:hover {
-            color: #e65100; /* Darker orange on hover */
-        }
+    header, main, footer {
+      padding: 0 20px;
+    }
 
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%; /* Ensure responsiveness */
-        }
+    /* Header with Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(28, 28, 28, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
 
-        .text-center {
-            text-align: center;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-        /* Header & Navigation */
-        header {
-            background-color: rgba(28, 28, 28, 0.95); /* Slight transparency */
-            padding: 1rem 0;
-            position: sticky; /* Sticky header */
-            top: 0;
-            z-index: 100; /* Ensure header is above other content */
-            border-bottom: 1px solid #333; /* Subtle border */
-        }
-        nav {
-            display: flex;
-            justify-content: space-between; /* Space out nav items */
-            align-items: center;
-        }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+    }
 
-        .nav-links { /*  For a horizontal navigation */
-            list-style: none;
-            display: flex;
-            gap: 2rem; /* Consistent spacing */
-        }
-        .nav-links a {
-            color: #e0e0e0;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .nav-links a:hover {
-            background-color: #ff6347;
-            color: white;
-        }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-          /*  padding-left: 20px; */ /*  Give the logo some space */
-        }
+    .nav-links a {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url('RNR%20WEB%20DESIGN%20SVG.svg') no-repeat center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('RNR%20WEB%20DESIGN%20SVG.svg') no-repeat center center; /* Darker overlay */
-            background-size: cover; /* Cover the entire area */
-            height: 80vh;  /* Reduced hero height for better content visibility */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;  /* Needed for absolute positioning of pseudo-elements */
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
 
-        .hero-content {
-            max-width: 800px;
-            position: relative; /*  Relative positioning for z-index */
-            z-index: 2; /*  Ensure content is above the overlay */
-        }
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);  /* Responsive font size with clamp() */
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow */
-        }
-        .hero-content p {
-            font-size: clamp(1.2rem, 2vw, 1.6rem); /* Responsive font size */
-            margin-bottom: 2rem;
-            color: #ffffff;
-        }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
 
-        /* Button Styles */
-        .btn {
-            background-color: #ff6347; /* Tomato color */
-            color: #fff;
-            padding: 1rem 2rem;  /* Larger padding */
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block; /* Allows for margin/padding on all sides */
-        }
+    .hero-content h1 {
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
 
-        .btn:hover {
-            background-color: #e65100;  /* Darker orange */
-            transform: translateY(-3px); /* More pronounced lift */
-            box-shadow: 0 6px 18px rgba(255, 99, 71, 0.5); /* Larger shadow */
-        }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      color: #e0e0e0;
+    }
 
-        /* Welcome Section */
-        .welcome-section {
-            background-color: #2a2a2a;
-            padding: 4rem 0; /* Vertical padding */
-            text-align: center;
-        }
-          .welcome-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        .welcome-section p {
-            font-size: 1.2rem;
-            max-width: 800px; /* Limit paragraph width */
-            margin: 0 auto 2rem; /* Center and add bottom margin */
-        }
+    /* Button Styles */
+    .btn {
+      background: linear-gradient(45deg, #ff3333, #cc0000);
+      color: #fff;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(255, 51, 51, 0.5);
+    }
 
+    .btn:hover {
+      background: linear-gradient(45deg, #cc0000, #ff3333);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 51, 51, 0.7);
+    }
 
-        /* SoundCloud Section */
-        .soundcloud-section {
-            background-color: #2a2a2a;
-            padding: 3rem 2rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid #ff6347; /* Use the brand color */
-        }
+    /* Welcome Section */
+    .welcome-section {
+      background: #2a2a2a;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
 
-        /* Cards Section */
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*  Slightly larger min width */
-            gap: 2rem;
-            padding: 4rem 0; /* Consistent vertical padding */
-        }
+    .welcome-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-        .card {
-            background-color: #2a2a2a;
-            border: 2px solid #ff6347;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow by default */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;  /* Distribute space within the card */
-            height: 100%; /* Make cards take full height of grid cell */
+    /* SoundCloud Section */
+    .soundcloud-section {
+      background: #2a2a2a;
+      padding: 3rem;
+      margin: 3rem auto;
+      max-width: 900px;
+      border-radius: 16px;
+      text-align: center;
+      border: 3px solid #ff3333;
+      box-shadow: 0 8px 30px rgba(255, 51, 51, 0.2);
+      animation: fadeIn 1s ease-out;
+    }
 
-        }
+    .soundcloud-container {
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
-        .card:hover {
-            transform: translateY(-8px); /* More pronounced lift */
-            border-color: #e65100;
-            box-shadow: 0 8px 25px rgba(255, 99, 71, 0.4);
-        }
+    /* Cards Section */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-        .card-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: #ff6347;  /* Use brand color */
-        }
+    .card {
+      background: #2a2a2a;
+      border: 3px solid #ff3333;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .card h3 {
-            margin-bottom: 1rem;
-            color: #ffffff;
-            font-size: 1.6rem; /* Slightly larger heading */
-        }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 51, 51, 0.1), transparent);
+      transition: all 0.4s ease;
+      z-index: 0;
+    }
 
-        .card p {
-            font-size: 1.1rem;
-            flex-grow: 1; /*  Allow paragraph to take up remaining space */
-        }
+    .card:hover::before {
+      transform: scale(1.2);
+    }
 
-        /* Contact Form Section */
-        .contact-section {
-            background-color: #2a2a2a;
-            padding: 3rem;
-            border-radius: 12px;
-            max-width: 700px;
-            margin: 4rem auto;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Darker shadow */
-        }
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #cc0000;
+      box-shadow: 0 12px 40px rgba(255, 51, 51, 0.4);
+    }
 
-        .contact-section h2 {
-            color: #ffffff;
-            font-size: 2.5rem; /* Larger heading */
-            margin-bottom: 1rem;
-            text-align: center;
-        }
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
 
-        .contact-section p {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
+    .card-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: #ff3333;
+    }
 
-        .form-group {
-           margin-bottom: 1.5rem; /* Spacing between form elements */
-        }
+    .card h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
 
-        .contact-section label {
-            display: block; /* Labels on their own line */
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #ffffff;
-        }
+    .card p {
+      font-size: 1.2rem;
+    }
 
-        .contact-section input,
-        .contact-section textarea {
-            width: 100%; /* Full width inputs */
-            padding: 1rem;
-            border: 2px solid #ff6347;
-            border-radius: 8px;
-            background-color: #1c1c1c;
-            color: #e0e0e0;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
+    /* Contact Form Section */
+    .contact-section {
+      background: #2a2a2a;
+      padding: 4rem;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: 5rem auto;
+      box-shadow: 0 8px 30px rgba(255, 51, 51, 0.2);
+      animation: fadeInUp 1s ease-out;
+    }
 
-        .contact-section input:focus,
-        .contact-section textarea:focus {
-            outline: none;
-            border-color: #e65100;
-            box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
-        }
+    .contact-section h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-        .contact-section .btn {
-          width: 100%; /* Make the submit button full-width */
-          margin-top: 1rem; /* Add some space above the button */
-        }
+    .contact-section p {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 1.3rem;
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 2px solid #ff6347;
-            margin-top: 4rem;
-            font-size: 0.9rem; /* Slightly smaller text */
-        }
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links{
-                flex-direction: column; /* Stack nav links on small screens */
-                gap: 0.5rem; /* Reduce gap */
-                width: 100%;
+    .contact-section label {
+      font-weight: 600;
+      color: #fff;
+      font-size: 1.1rem;
+    }
 
-            }
-            .cards-container {
-              padding: 2rem 0;  /* Reduced padding */
-            }
-            .contact-section {
-                padding: 2rem;
-                margin: 2rem;
-            }
-              .hero {
-                height: 60vh; /* Reduce hero height on smaller screens*/
-            }
-        }
-    </style>
+    .contact-section input,
+    .contact-section textarea {
+      padding: 1.2rem;
+      border: 2px solid #ff3333;
+      border-radius: 8px;
+      background: #1c1c1c;
+      color: #e0e0e0;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-section input:focus,
+    .contact-section textarea:focus {
+      border-color: #cc0000;
+      box-shadow: 0 0 12px rgba(255, 51, 51, 0.4);
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 3px solid #ff3333;
+      background: #1c1c1c;
+      margin-top: 5rem;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 3rem; }
+      .hero-content p { font-size: 1.3rem; }
+      .nav-links { display: none; } /* Add hamburger menu in real implementation */
+      .contact-section { padding: 3rem; margin: 3rem 1rem; }
+      .card { padding: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-content p { font-size: 1.1rem; }
+      .btn { padding: 12px 30px; font-size: 1rem; }
+      .card h3 { font-size: 1.5rem; }
+      .card p { font-size: 1rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="container" aria-label="Main Navigation">
-             <div class="logo">RNR Tires</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#services">Services</a></li>  <li><a href="#contact">Contact</a></li>
-                </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">RNR Tires</div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#audio">Audio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <section class="hero" role="banner" aria-label="Welcome Banner">
-        <div class="hero-content">
-            <h1>Your Dream Ride Starts Here</h1>
-            <p>Get the best tires and wheels with flexible payment options and expert service.</p>
-            <a href="#contact" class="btn">Get a Quote</a>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="Welcome Banner">
+    <div class="hero-content">
+      <h1>Ride with Shane at RNR Tires</h1>
+      <p>Your Dream Ride, Simplified!</p>
+      <button class="btn" onclick="document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });">
+        Get Started
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- SoundCloud Section -->
+    <section class="soundcloud-section" id="audio">
+      <h2>Listen to Shane’s Expertise</h2>
+      <div class="soundcloud-container">
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2039067124&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;">
+        <a href="https://soundcloud.com/shane-lockhart-540309855" title="Shane" target="_blank" style="color: #cccccc;">Shane</a> · 
+        <a href="https://soundcloud.com/shane-lockhart-540309855/tires-and-wheels-sizes" title="Tires and Wheels_ Sizes, Patterns, and Custom Trends (1).wav" target="_blank" style="color: #cccccc;">Tires and Wheels_ Sizes, Patterns, and Custom Trends (1).wav</a>
+      </div>
     </section>
 
-     <section class="welcome-section container">
-        <h2>Ride with Shane at RNR Tires</h2>
-        <p>Experience the best in tire and wheel expertise—passion, affordability, and stress-free service all in one.</p>
-        <a href="#contact" class="btn">Get Started</a>
+    <!-- Index Cards Section -->
+    <section class="cards-container" id="features" aria-label="Key Features">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">💳</div>
+        <h3>Everyone's Approved Payment Options</h3>
+        <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏷️</div>
+        <h3>Top Name Brands</h3>
+        <p>Discover premium tires and wheels from brands you trust.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🛠️</div>
+        <h3>Free Services</h3>
+        <p>Includes Nitrogen, Flat Repair, Alignment Checks, Tire Rotation & Balance, Professional Installation, and 12-Month Roadside Assistance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔧</div>
+        <h3>Expert Advice</h3>
+        <p>Personalized, honest guidance from Shane, your local tire pro.</p>
+      </div>
     </section>
 
-    <main>
-        <section class="soundcloud-section container">
-           <div class="soundcloud-container">
-               <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2039067124&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            </div>
-             <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
-                <a href="https://soundcloud.com/shane-lockhart-540309855" title="Shane" target="_blank" style="color: #cccccc; text-decoration: none;">Shane</a> ·
-                <a href="https://soundcloud.com/shane-lockhart-540309855/tires-and-wheels-sizes" title="Tires and Wheels_ Sizes, Patterns, and Custom Trends (1).wav" target="_blank" style="color: #cccccc; text-decoration: none;">Tires and Wheels_ Sizes, Patterns, and Custom Trends (1).wav</a>
-            </div>
-        </section>
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact" aria-label="Contact Form">
+      <h2>Ready to Transform Your Ride?</h2>
+      <p>Get a quick quote or visit us today.</p>
+      <form action="/submit-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
 
-        <section id="services" class="cards-container container" aria-label="Key Features">
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">💳</div>
-                <h3>Everyone's Approved Payment Options</h3>
-                <p>Flexible plans regardless of your credit history.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">🏷️</div>
-                <h3>Top Name Brands</h3>
-                <p>Wide selection of quality tires and wheels.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">🛠️</div>
-                <h3>Free Premium Services</h3>
-                <p>Nitrogen, flat repair, alignment checks, and more.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">🔧</div>
-                <h3>Expert Advice</h3>
-                <p>Personalized guidance from Shane.</p>
-            </div>
-        </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Your Email">
 
-        <section id="contact" class="contact-section container" aria-label="Contact Form">
-            <h2>Ready to Transform Your Ride?</h2>
-            <p>Get a quick quote online or stop by today.</p>
-             <form action="/submit-form" method="POST">  <div class="form-group">
-                    <label for="name">Name:</label>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 RNR Tires. All rights reserved.</p>
+  </footer>
+
+  <!-- Chatbot Script -->
+  <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="46088"></script>
+</body>
+</html>
