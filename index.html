@@ -86,12 +86,22 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: url('RNR%20WEB%20DESIGN%20SVG.svg') no-repeat center;
       background-size: cover;
       background-attachment: fixed; /* Parallax effect */
     }
 
     .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-image {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -450,12 +460,13 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Video -->
+  <!-- Hero Section with Video and Static Image -->
   <section class="hero" role="banner" aria-label="Welcome Banner">
-    <video autoplay muted loop>
+    <video autoplay muted>
       <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+    <img class="hero-image" src="RNR%20WEB%20DESIGN%20SVG.svg" alt="RNR Tires Hero Image">
     <div class="hero-content">
       <h1>Ride with Shane at RNR Tires</h1>
       <p>Your Dream Ride, Simplified!</p>
@@ -578,5 +589,19 @@
 
   <!-- Chatbot Script -->
   <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="46088"></script>
+  <!-- JavaScript to handle video end and show image -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('.hero video');
+      const image = document.querySelector('.hero-image');
+
+      if (video && image) {
+        video.addEventListener('ended', function() {
+          video.style.display = 'none';
+          image.style.display = 'block';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
