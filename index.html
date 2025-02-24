@@ -295,59 +295,6 @@
       justify-content: center;
     }
 
-    /* Dropdown for Top Name Brands (Mobile) */
-    .dropdown-card {
-      position: relative;
-      background: #2a2a2a;
-      border: 2px solid #ff3333;
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.4s ease;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #e0e0e0;
-    }
-
-    .dropdown-card:hover {
-      transform: translateY(-5px);
-      border-color: #cc0000;
-      box-shadow: 0 8px 20px rgba(255, 51, 51, 0.4);
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      bottom: -80px;
-      left: 0;
-      width: 100%;
-      background: #2a2a2a;
-      border: 2px solid #ff3333;
-      border-radius: 12px;
-      padding: 0.5rem;
-      z-index: 10;
-      color: #e0e0e0;
-    }
-
-    .dropdown-card:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 0.5rem;
-      font-size: 1rem;
-      color: #e0e0e0;
-      transition: background 0.3s ease;
-    }
-
-    .dropdown-content a:hover {
-      background: #ff3333;
-      color: #fff;
-    }
-
     /* Testimonials Section (Mobile) */
     .testimonials {
       padding: 2rem 1rem;
@@ -591,23 +538,15 @@
         border: 3px solid #ff3333;
       }
 
-      .dropdown-card {
-        height: 320px;
-      }
-
-      .dropdown-content {
-        bottom: -90px;
-      }
-
       .card-icon {
         font-size: 4rem;
       }
 
-      .card h3, .dropdown-card h3 {
+      .card h3 {
         font-size: 1.8rem;
       }
 
-      .card p, .dropdown-card p {
+      .card p {
         font-size: 1.2rem;
       }
 
@@ -746,14 +685,10 @@
           <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
         </div>
       </a>
-      <div class="dropdown-card">
+      <div class="card">
         <div class="card-icon" aria-hidden="true">🏷️</div>
         <h3>Top Name Brands</h3>
-        <p>Discover premium tires and wheels from brands you trust.</p>
-        <div class="dropdown-content">
-          <a href="https://rnrtires.com/wheels/">Wheels</a>
-          <a href="https://rnrtires.com/tires/">Tires</a>
-        </div>
+        <p>Discover premium brands: <a href="https://rnrtires.com/wheels/">Wheels</a> | <a href="https://rnrtires.com/tires/">Tires</a></p>
       </div>
       <a href="services.html" class="card-link">
         <div class="card">
@@ -790,7 +725,8 @@
     <section class="contact-section" id="contact" aria-label="Contact Form">
       <h2>Ready to Transform Your Ride?</h2>
       <p>Get a quick quote or visit us today.</p>
-      <form action="/submit-form" method="POST">
+      <form action="/submit-form" method="POST" name="contact" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
         <label for="email">Email:</label>
@@ -825,6 +761,7 @@
       <p><a href="tel:+13342790059">334.279.0059</a></p>
       <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
       <p>info@rnrtires.com</p>
+      <p>Website created by <a href="https://intelliaipro.com">Intelliaipro.com</a></p>
     </div>
   </footer>
 
