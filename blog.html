@@ -17,7 +17,15 @@
     "url": "https://www.example.com/blog.html",
     "publisher": {
       "@type": "Organization",
-      "name": "RNR Tire Express"
+      "name": "RNR Tire Express",
+      "telephone": "334-279-0059",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1059 N. Eastern Blvd",
+        "addressLocality": "Montgomery",
+        "addressRegion": "AL",
+        "postalCode": "36117"
+      }
     }
   }
   </script>
@@ -73,10 +81,87 @@
       display: none; /* Hidden on mobile */
     }
 
+    /* Hero Section (Mobile) */
+    .hero {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background-size: cover;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-image {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .contact-info a {
+      color: #ff3333;
+    }
+
+    .contact-info a:hover {
+      color: #cc0000;
+    }
+
     /* Blog Section (Mobile) */
     .blog-section {
       padding: 2rem 1rem;
       text-align: center;
+      color: #e0e0e0;
     }
 
     .blog-section h1 {
@@ -104,6 +189,7 @@
       border-radius: 12px;
       border: 2px solid #ff3333;
       transition: all 0.3s ease;
+      color: #e0e0e0;
     }
 
     .blog-post:hover {
@@ -164,6 +250,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      color: #e0e0e0;
     }
 
     footer h4 {
@@ -212,6 +299,28 @@
         letter-spacing: 1px;
       }
 
+      .hero {
+        height: 100vh;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+      }
+
+      .contact-info {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+
       .blog-section {
         padding: 5rem 2rem;
         max-width: 900px;
@@ -243,12 +352,6 @@
 
       .blog-post p {
         font-size: 1.2rem;
-      }
-
-      .btn {
-        padding: 16px 40px;
-        font-size: 1.2rem;
-        letter-spacing: 2px;
       }
 
       .sticky-cta {
@@ -288,6 +391,28 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="Welcome Banner">
+    <video autoplay muted>
+      <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img class="hero-image" src="roadbackground.svg" alt="RNR Tires Hero Image">
+    <div class="hero-content">
+      <h1>Ride with Shane at RNR Tires</h1>
+      <p>Your Dream Ride, Simplified!</p>
+      <div>
+        <button class="btn" onclick="document.querySelector('.blog-section').scrollIntoView({ behavior: 'smooth' });">
+          Get Started
+        </button>
+      </div>
+      <div class="contact-info">
+        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
+        <p>Shane Lockhart: Call or text me direct (cell) at <a href="tel:+13342240564">334.224.0564</a> or <a href="index.html#contact">use contact form</a> to email me direct</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Blog Section -->
   <section class="blog-section" aria-label="Blog Posts">
     <h1>Talk to an Expert</h1>
@@ -325,8 +450,10 @@
     </div>
     <div>
       <h4>Contact Us</h4>
-      <p>+1-555-1234567</p>
+      <p><a href="tel:+13342790059">334.279.0059</a></p>
+      <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
       <p>info@rnrtires.com</p>
+      <p>Website created by <a href="https://intelliaipro.com">Intelliaipro.com</a></p>
     </div>
   </footer>
 </body>
