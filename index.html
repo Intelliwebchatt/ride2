@@ -247,12 +247,20 @@
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
+      height: 280px; /* Fixed height for consistency */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .card-link {
       display: block;
       text-decoration: none;
       color: inherit;
+      height: 100%;
+    }
+
+    .card-link .card {
       height: 100%;
     }
 
@@ -302,6 +310,61 @@
 
     .card p {
       font-size: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Dropdown for Top Name Brands */
+    .dropdown-card {
+      position: relative;
+      background: #2a2a2a;
+      border: 3px solid #ff3333;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 280px; /* Match other cards */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dropdown-card:hover {
+      transform: translateY(-10px);
+      border-color: #cc0000;
+      box-shadow: 0 12px 40px rgba(255, 51, 51, 0.4);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #2a2a2a;
+      border: 3px solid #ff3333;
+      border-radius: 16px;
+      z-index: 100;
+      padding: 1rem;
+    }
+
+    .dropdown-card:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background: #ff3333;
+      color: #fff;
     }
 
     /* Testimonials Section */
@@ -454,16 +517,18 @@
       .hero-content p { font-size: 1.3rem; }
       .nav-links { display: none; } /* Add hamburger menu with JS in production */
       .contact-section { padding: 3rem; margin: 3rem 1rem; }
-      .card { padding: 2rem; }
+      .card, .dropdown-card { padding: 2rem; height: 260px; }
       .sticky-cta { display: block; }
+      .dropdown-content { position: relative; top: 0; }
     }
 
     @media (max-width: 480px) {
       .hero-content h1 { font-size: 2.2rem; }
       .hero-content p { font-size: 1.1rem; }
       .btn { padding: 12px 30px; font-size: 1rem; }
-      .card h3 { font-size: 1.5rem; }
-      .card p { font-size: 1rem; }
+      .card h3, .dropdown-card h3 { font-size: 1.5rem; }
+      .card p, .dropdown-card p { font-size: 1rem; }
+      .card, .dropdown-card { height: 240px; }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -535,10 +600,14 @@
           <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
         </div>
       </a>
-      <div class="card">
+      <div class="dropdown-card">
         <div class="card-icon" aria-hidden="true">🏷️</div>
         <h3>Top Name Brands</h3>
         <p>Discover premium tires and wheels from brands you trust.</p>
+        <div class="dropdown-content">
+          <a href="https://rnrtires.com/wheels/">Wheels</a>
+          <a href="https://rnrtires.com/tires/">Tires</a>
+        </div>
       </div>
       <a href="services.html" class="card-link">
         <div class="card">
