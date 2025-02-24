@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore RNR Tire Express's free services with every tire and wheel purchase: nitrogen inflation, flat repair, alignment checks, tire rotation & balance, installation, and 12-month roadside assistance.">
+  <meta name="keywords" content="RNR Tire Express, free tire services, nitrogen inflation, flat tire repair, alignment checks, tire rotation, roadside assistance, tire installation">
+  <meta name="robots" content="index, follow">
+  <title>Free Services | RNR Tire Express</title>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "RNR Tire Express Services",
+    "description": "Free services with every tire and wheel purchase at RNR Tire Express, including nitrogen inflation, flat tire repair, alignment checks, tire rotation & balance, professional installation, and 12-month roadside assistance.",
+    "url": "https://www.example.com/services.html",
+    "telephone": "+1-555-1234567",
+    "offers": {
+      "@type": "Offer",
+      "name": "Free Tire and Wheel Services",
+      "description": "Complimentary services with purchase: nitrogen inflation, flat repair, alignment checks, tire rotation & balance, installation, and roadside assistance."
+    }
+  }
+  </script>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+      color: #e0e0e0;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #ff3333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #cc0000;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(28, 28, 28, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .services-section h2 {
+      font-size: 2rem;
+      color: #ff3333;
+      margin: 2rem 0 1rem;
+    }
+
+    .services-section p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .services-section ul {
+      list-style: none;
+      text-align: left;
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
+    .services-section ul li {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .services-section ul li:before {
+      content: "✔";
+      color: #ff3333;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Button Styles */
+    .btn {
+      background: linear-gradient(45deg, #ff3333, #cc0000);
+      color: #fff;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(255, 51, 51, 0.5);
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #cc0000, #ff3333);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 51, 51, 0.7);
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ff3333;
+      padding: 10px;
+      text-align: center;
+      display: none;
+      z-index: 1000;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 3px solid #ff3333;
+      background: #1c1c1c;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 5rem;
+    }
+
+    footer h4 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    footer p, footer a {
+      font-size: 1.1rem;
+    }
+
+    /* Section Dividers */
+    section::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #ff3333, transparent);
+      margin: 3rem auto;
+      width: 50%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .services-section { padding: 3rem 1rem; }
+      .services-section h1 { font-size: 2.5rem; }
+      .services-section h2 { font-size: 1.8rem; }
+      .services-section p, .services-section ul li { font-size: 1.1rem; }
+      .sticky-cta { display: block; }
+    }
+
+    @media (max-width: 480px) {
+      .services-section h1 { font-size: 2rem; }
+      .services-section h2 { font-size: 1.5rem; }
+      .services-section p, .services-section ul li { font-size: 1rem; }
+      .btn { padding: 12px 30px; font-size: 1rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">RNR Tires</div>
+      <div
