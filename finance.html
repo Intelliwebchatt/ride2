@@ -15,26 +15,33 @@
     "name": "RNR Tire Express Financing",
     "description": "Flexible payment plans for tires and wheels with no credit checks at RNR Tire Express. Everyone's Approved!",
     "url": "https://www.example.com/finance.html",
-    "telephone": "+1-555-1234567",
+    "telephone": "334-279-0059",
     "provider": {
       "@type": "Organization",
-      "name": "RNR Tire Express"
+      "name": "RNR Tire Express",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1059 N. Eastern Blvd",
+        "addressLocality": "Montgomery",
+        "addressRegion": "AL",
+        "postalCode": "36117"
+      }
     }
   }
   </script>
   <style>
-    /* Reset & Base Styles */
+    /* Reset & Base Styles (Mobile-First) */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Poppins', Arial, sans-serif;
       background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
       color: #e0e0e0;
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -48,79 +55,144 @@
       color: #cc0000;
     }
 
-    /* Header */
+    /* Header (Mobile) */
     header {
       position: sticky;
       top: 0;
       background: rgba(28, 28, 28, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
-      padding: 1rem 2rem;
+      padding: 1rem;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1400px;
-      margin: 0 auto;
     }
 
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: #fff;
     }
 
     .nav-links {
+      display: none; /* Hidden on mobile */
+    }
+
+    /* Hero Section (Mobile) - Added for consistency */
+    .hero {
+      position: relative;
+      height: 80vh;
       display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Finance Section */
-    .finance-section {
-      padding: 5rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      overflow: hidden;
+      background-size: cover;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-image {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .contact-info a {
+      color: #ff3333;
+    }
+
+    .contact-info a:hover {
+      color: #cc0000;
+    }
+
+    /* Finance Section (Mobile) */
+    .finance-section {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #e0e0e0;
     }
 
     .finance-section h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .finance-section h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #ff3333;
-      margin: 2rem 0 1rem;
+      margin: 1.5rem 0 0.75rem;
     }
 
     .finance-section p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
     .finance-section ul {
       list-style: none;
       text-align: left;
-      max-width: 700px;
-      margin: 2rem auto;
+      margin: 1.5rem 0;
     }
 
     .finance-section ul li {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
       position: relative;
-      padding-left: 2rem;
+      padding-left: 1.5rem;
     }
 
     .finance-section ul li:before {
@@ -130,30 +202,30 @@
       left: 0;
     }
 
-    /* Button Styles */
+    /* Button Styles (Mobile) */
     .btn {
       background: linear-gradient(45deg, #ff3333, #cc0000);
       color: #fff;
-      padding: 16px 40px;
+      padding: 12px 30px;
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       transition: all 0.4s ease;
-      box-shadow: 0 4px 15px rgba(255, 51, 51, 0.5);
+      box-shadow: 0 4px 10px rgba(255, 51, 51, 0.5);
       display: inline-block;
     }
 
     .btn:hover {
       background: linear-gradient(45deg, #cc0000, #ff3333);
       transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(255, 51, 51, 0.7);
+      box-shadow: 0 6px 15px rgba(255, 51, 51, 0.7);
     }
 
-    /* Sticky CTA */
+    /* Sticky CTA (Mobile) */
     .sticky-cta {
       position: fixed;
       bottom: 0;
@@ -162,65 +234,132 @@
       background: #ff3333;
       padding: 10px;
       text-align: center;
-      display: none;
       z-index: 1000;
     }
 
-    /* Footer */
+    /* Footer (Mobile) */
     footer {
-      padding: 3rem 2rem;
-      border-top: 3px solid #ff3333;
+      padding: 2rem 1rem;
+      border-top: 2px solid #ff3333;
       background: #1c1c1c;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      color: #e0e0e0;
     }
 
     footer h4 {
       color: #fff;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
     }
 
     footer p, footer a {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
-    /* Section Dividers */
+    /* Section Dividers (Mobile) */
     section::after {
       content: '';
       display: block;
       height: 2px;
       background: linear-gradient(to right, transparent, #ff3333, transparent);
-      margin: 3rem auto;
-      width: 50%;
+      margin: 2rem auto;
+      width: 70%;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    /* Desktop Adjustments (min-width: 768px) */
+    @media (min-width: 768px) {
+      header {
+        padding: 1rem 2rem;
+      }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+      nav {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .finance-section { padding: 3rem 1rem; }
-      .finance-section h1 { font-size: 2.5rem; }
-      .finance-section h2 { font-size: 1.8rem; }
-      .finance-section p, .finance-section ul li { font-size: 1.1rem; }
-      .sticky-cta { display: block; }
-    }
+      .logo {
+        font-size: 1.8rem;
+      }
 
-    @media (max-width: 480px) {
-      .finance-section h1 { font-size: 2rem; }
-      .finance-section h2 { font-size: 1.5rem; }
-      .finance-section p, .finance-section ul li { font-size: 1rem; }
-      .btn { padding: 12px 30px; font-size: 1rem; }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        height: 100vh;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+      }
+
+      .contact-info {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+
+      .finance-section {
+        padding: 5rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .finance-section h1 {
+        font-size: 3rem;
+      }
+
+      .finance-section h2 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+      }
+
+      .finance-section p, .finance-section ul li {
+        font-size: 1.2rem;
+      }
+
+      .finance-section ul {
+        max-width: 700px;
+        margin: 2rem auto;
+      }
+
+      .sticky-cta {
+        display: none;
+      }
+
+      footer {
+        padding: 3rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 5rem;
+        border-top: 3px solid #ff3333;
+      }
+
+      footer h4 {
+        font-size: 1.4rem;
+      }
+
+      footer p, footer a {
+        font-size: 1.1rem;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -237,6 +376,28 @@
       </div>
     </nav>
   </header>
+
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="Welcome Banner">
+    <video autoplay muted>
+      <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img class="hero-image" src="roadbackground.svg" alt="RNR Tires Hero Image">
+    <div class="hero-content">
+      <h1>Ride with Shane at RNR Tires</h1>
+      <p>Your Dream Ride, Simplified!</p>
+      <div>
+        <button class="btn" onclick="document.querySelector('.finance-section').scrollIntoView({ behavior: 'smooth' });">
+          Get Started
+        </button>
+      </div>
+      <div class="contact-info">
+        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
+        <p>Shane Lockhart: Call or text me direct (cell) at <a href="tel:+13342240564">334.224.0564</a> or <a href="index.html#contact">use contact form</a> to email me direct</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Finance Section -->
   <section class="finance-section" aria-label="Financing Options">
@@ -284,7 +445,8 @@
     </div>
     <div>
       <h4>Contact Us</h4>
-      <p>+1-555-1234567</p>
+      <p><a href="tel:+13342790059">334.279.0059</a></p>
+      <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
       <p>info@rnrtires.com</p>
     </div>
   </footer>
