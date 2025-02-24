@@ -13,7 +13,14 @@
     "name": "RNR Tires",
     "description": "Ride with Shane at RNR Tires: Your Dream Ride, Simplified! Flexible payment options, top name brands, free premium services, and expert advice.",
     "url": "https://www.example.com",
-    "telephone": "+1-555-1234567"
+    "telephone": "334-279-0059",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1059 N. Eastern Blvd",
+      "addressLocality": "Montgomery",
+      "addressRegion": "AL",
+      "postalCode": "36117"
+    }
   }
   </script>
   <style>
@@ -27,7 +34,7 @@
     body {
       font-family: 'Poppins', Arial, sans-serif;
       background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-      color: #e0e0e0; /* Default text color set to original white */
+      color: #e0e0e0;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -116,7 +123,7 @@
       position: relative;
       z-index: 2;
       padding: 1rem;
-      color: #fff; /* Ensure hero text is white */
+      color: #fff;
     }
 
     .hero-content h1 {
@@ -135,6 +142,20 @@
       flex-direction: column;
       gap: 0.5rem;
       font-size: 0.9rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .contact-info a {
+      color: #ff3333;
+    }
+
+    .contact-info a:hover {
+      color: #cc0000;
     }
 
     /* Button Styles (Mobile) */
@@ -179,7 +200,7 @@
       border-radius: 12px;
       border: 2px solid #ff3333;
       box-shadow: 0 6px 20px rgba(255, 51, 51, 0.2);
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .overview-section h2 {
@@ -201,7 +222,7 @@
       text-align: center;
       border: 2px solid #ff3333;
       box-shadow: 0 6px 20px rgba(255, 51, 51, 0.2);
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .soundcloud-container {
@@ -229,7 +250,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .card-link {
@@ -283,11 +304,11 @@
       padding: 2rem;
       text-align: center;
       transition: all 0.4s ease;
-      height: 300px; /* Increased height to accommodate dropdown */
+      height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .dropdown-card:hover {
@@ -299,7 +320,7 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      bottom: -80px; /* Position below card to avoid overlap */
+      bottom: -80px;
       left: 0;
       width: 100%;
       background: #2a2a2a;
@@ -307,7 +328,7 @@
       border-radius: 12px;
       padding: 0.5rem;
       z-index: 10;
-      color: #e0e0e0; /* Ensure dropdown text is white */
+      color: #e0e0e0;
     }
 
     .dropdown-card:hover .dropdown-content {
@@ -331,7 +352,7 @@
     .testimonials {
       padding: 2rem 1rem;
       text-align: center;
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .testimonial-grid {
@@ -347,7 +368,7 @@
       border-radius: 12px;
       border: 2px solid #ff3333;
       transition: all 0.3s ease;
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .testimonial:hover {
@@ -373,7 +394,7 @@
       border-radius: 12px;
       margin: 2rem 1rem;
       box-shadow: 0 6px 20px rgba(255, 51, 51, 0.2);
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     .contact-section h2 {
@@ -439,7 +460,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      color: #e0e0e0; /* Ensure text is white */
+      color: #e0e0e0;
     }
 
     footer h4 {
@@ -517,6 +538,10 @@
         font-size: 1rem;
       }
 
+      .contact-info {
+        font-size: 1rem;
+      }
+
       .btn {
         padding: 16px 40px;
         font-size: 1.2rem;
@@ -567,11 +592,11 @@
       }
 
       .dropdown-card {
-        height: 320px; /* Slightly larger for dropdown */
+        height: 320px;
       }
 
       .dropdown-content {
-        bottom: -90px; /* Adjusted for larger height */
+        bottom: -90px;
       }
 
       .card-icon {
@@ -680,6 +705,10 @@
         <button class="btn secondary-btn" onclick="document.querySelector('.cards-container').scrollIntoView({ behavior: 'smooth' });">
           Explore Services
         </button>
+      </div>
+      <div class="contact-info">
+        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
+        <p>Shane Lockhart: Call or text me direct at <a href="tel:+13342240464">334.224.0464</a> or <a href="#contact">use contact form</a> to email me direct</p>
       </div>
       <div class="trust-signals">
         <span>Trusted by 10,000+ Drivers</span>
@@ -793,7 +822,8 @@
     </div>
     <div>
       <h4>Contact Us</h4>
-      <p>+1-555-1234567</p>
+      <p><a href="tel:+13342790059">334.279.0059</a></p>
+      <p>1059 N. Eastern Blvd, Montgomery, AL 36117</p>
       <p>info@rnrtires.com</p>
     </div>
   </footer>
