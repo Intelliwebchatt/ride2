@@ -249,6 +249,13 @@
       overflow: hidden;
     }
 
+    .card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+    }
+
     .card::before {
       content: '';
       position: absolute;
@@ -521,11 +528,13 @@
 
     <!-- Index Cards Section -->
     <section class="cards-container" id="features" aria-label="Key Features">
-      <div class="card">
-        <div class="card-icon" aria-hidden="true">💳</div>
-        <h3>Everyone's Approved Payment Options</h3>
-        <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
-      </div>
+      <a href="finance.html" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">💳</div>
+          <h3>Everyone's Approved Payment Options</h3>
+          <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
+        </div>
+      </a>
       <div class="card">
         <div class="card-icon" aria-hidden="true">🏷️</div>
         <h3>Top Name Brands</h3>
