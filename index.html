@@ -239,6 +239,10 @@
       padding: 2rem 1rem;
     }
 
+    .cards-container > .card-link, .cards-container > .card {
+      height: 260px;
+    }
+
     .card {
       background: #2a2a2a;
       border: 2px solid #ff3333;
@@ -246,11 +250,12 @@
       padding: 2rem;
       text-align: center;
       transition: all 0.4s ease;
-      height: 260px;
+      height: 100%; /* Ensure height matches parent */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       color: #e0e0e0;
+      overflow: hidden; /* Prevent content overflow */
     }
 
     .card-link {
@@ -532,10 +537,15 @@
         margin: 0 auto;
       }
 
+      .cards-container > .card-link, .cards-container > .card {
+        height: 280px;
+      }
+
       .card {
         padding: 2.5rem;
-        height: 280px;
+        height: 100%; /* Ensure height matches parent */
         border: 3px solid #ff3333;
+        overflow: hidden; /* Prevent content overflow */
       }
 
       .card-icon {
@@ -685,11 +695,20 @@
           <p>Flexible plans regardless of your credit history to get you rolling fast.</p>
         </div>
       </a>
-      <div class="card">
-        <div class="card-icon" aria-hidden="true">🏷️</div>
-        <h3>Top Name Brands</h3>
-        <p>Discover premium brands: <a href="https://rnrtires.com/wheels/">Wheels</a> | <a href="https://rnrtires.com/tires/">Tires</a></p>
-      </div>
+      <a href="https://rnrtires.com/wheels/" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🏷️</div>
+          <h3>Top Name Brands - Wheels</h3>
+          <p>Explore premium wheel brands.</p>
+        </div>
+      </a>
+      <a href="https://rnrtires.com/tires/" class="card-link">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">🏷️</div>
+          <h3>Top Name Brands - Tires</h3>
+          <p>Discover premium tire brands.</p>
+        </div>
+      </a>
       <a href="services.html" class="card-link">
         <div class="card">
           <div class="card-icon" aria-hidden="true">🛠️</div>
