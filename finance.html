@@ -81,82 +81,6 @@
       display: none; /* Hidden on mobile */
     }
 
-    /* Hero Section (Mobile) */
-    .hero {
-      position: relative;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      background-size: cover;
-    }
-
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero-image {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 1rem;
-      color: #fff;
-    }
-
-    .hero-content h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-info {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .contact-info a {
-      color: #ff3333;
-    }
-
-    .contact-info a:hover {
-      color: #cc0000;
-    }
-
     /* Finance Section (Mobile) */
     .finance-section {
       padding: 2rem 1rem;
@@ -294,28 +218,6 @@
         letter-spacing: 1px;
       }
 
-      .hero {
-        height: 100vh;
-      }
-
-      .hero-content h1 {
-        font-size: 3rem;
-      }
-
-      .hero-content p {
-        font-size: 1.3rem;
-      }
-
-      .contact-info {
-        font-size: 1rem;
-      }
-
-      .btn {
-        padding: 16px 40px;
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-      }
-
       .finance-section {
         padding: 5rem 2rem;
         max-width: 900px;
@@ -338,6 +240,12 @@
       .finance-section ul {
         max-width: 700px;
         margin: 2rem auto;
+      }
+
+      .btn {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
       }
 
       .sticky-cta {
@@ -377,34 +285,12 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" role="banner" aria-label="Welcome Banner">
-    <video autoplay muted>
-      <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <img class="hero-image" src="roadbackground.svg" alt="RNR Tires Hero Image">
-    <div class="hero-content">
-      <h1>Ride with Shane at RNR Tires</h1>
-      <p>Your Dream Ride, Simplified!</p>
-      <div>
-        <button class="btn" onclick="document.querySelector('.finance-section').scrollIntoView({ behavior: 'smooth' });">
-          Get Started
-        </button>
-      </div>
-      <div class="contact-info">
-        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
-        <p>Shane Lockhart: Call or text me direct (cell) at <a href="tel:+13342240564">334.224.0564</a> or <a href="index.html#contact">use contact form</a> to email me direct</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Finance Section -->
   <section class="finance-section" aria-label="Financing Options">
     <h1>Flexible Financing at RNR Tire Express</h1>
     <p>Getting the tires and wheels you want has never been easier with RNR Tire Express’s <strong>Easy Payment Options</strong>. Our "Everyone's Approved" plans mean no credit checks—just affordable, flexible financing tailored to your budget. Drive away today and pay later!</p>
 
-    <h2>Why Choose RNR Financing?</h2>
+    <h2><svg style="width: 1.5rem; fill: #ff3333; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg> Why Choose RNR Financing?</h2>
     <p>At RNR, we believe everyone deserves their dream ride, regardless of credit history. Here’s what makes our payment plans stand out:</p>
     <ul>
       <li><strong>No Credit Needed:</strong> With our "Everyone’s Approved" program, we skip the credit checks and work with you to find a plan that fits.</li>
@@ -414,10 +300,10 @@
       <li><strong>Penalty-Free Cancellation:</strong> Change your mind? Cancel anytime with no penalties.</li>
     </ul>
 
-    <h2>How to Get Started</h2>
+    <h2><svg style="width: 1.5rem; fill: #ff3333; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg> How to Get Started</h2>
     <p>Ready to roll? Bring these to your local RNR Tire Express: your driver’s license, pay stub (proof of income), vehicle registration, and proof of residence (e.g., a utility bill). We’ll set you up with a payment plan that works for you.</p>
 
-    <h2>Payment Made Simple</h2>
+    <h2><svg style="width: 1.5rem; fill: #ff3333; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg> Payment Made Simple</h2>
     <p>Pay online (at participating stores), over the phone, or in-store with cash, credit card, or money order. There’s no need to pay upfront—get your tires and wheels now and manage payments later.</p>
 
     <p><strong>Service Area Note:</strong> Availability varies by location. Contact your nearest RNR store to confirm options in your area.</p>
