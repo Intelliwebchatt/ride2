@@ -81,82 +81,6 @@
       display: none; /* Hidden on mobile */
     }
 
-    /* Hero Section (Mobile) */
-    .hero {
-      position: relative;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      background-size: cover;
-    }
-
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero-image {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 1rem;
-      color: #fff;
-    }
-
-    .hero-content h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-info {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .contact-info a {
-      color: #ff3333;
-    }
-
-    .contact-info a:hover {
-      color: #cc0000;
-    }
-
     /* Blog Section (Mobile) */
     .blog-section {
       padding: 2rem 1rem;
@@ -299,28 +223,6 @@
         letter-spacing: 1px;
       }
 
-      .hero {
-        height: 100vh;
-      }
-
-      .hero-content h1 {
-        font-size: 3rem;
-      }
-
-      .hero-content p {
-        font-size: 1.3rem;
-      }
-
-      .contact-info {
-        font-size: 1rem;
-      }
-
-      .btn {
-        padding: 16px 40px;
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-      }
-
       .blog-section {
         padding: 5rem 2rem;
         max-width: 900px;
@@ -352,6 +254,12 @@
 
       .blog-post p {
         font-size: 1.2rem;
+      }
+
+      .btn {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
       }
 
       .sticky-cta {
@@ -391,39 +299,17 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" role="banner" aria-label="Welcome Banner">
-    <video autoplay muted>
-      <source src="20250223_1523_Drive%20with%20Style_simple_compose_01jmtb3gt2fsjtqyzb3xkfxay8.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <img class="hero-image" src="roadbackground.svg" alt="RNR Tires Hero Image">
-    <div class="hero-content">
-      <h1>Ride with Shane at RNR Tires</h1>
-      <p>Your Dream Ride, Simplified!</p>
-      <div>
-        <button class="btn" onclick="document.querySelector('.blog-section').scrollIntoView({ behavior: 'smooth' });">
-          Get Started
-        </button>
-      </div>
-      <div class="contact-info">
-        <p>Montgomery, AL: 1059 N. Eastern Blvd, <a href="tel:+13342790059">334.279.0059</a></p>
-        <p>Shane Lockhart: Call or text me direct (cell) at <a href="tel:+13342240564">334.224.0564</a> or <a href="index.html#contact">use contact form</a> to email me direct</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Blog Section -->
   <section class="blog-section" aria-label="Blog Posts">
     <h1>Talk to an Expert</h1>
     <p>Get the latest tips, tricks, and insights from Shane and the RNR Tire Express team to keep your ride in top shape.</p>
     <div class="blog-posts">
       <article class="blog-post">
-        <h2>Choosing the Right Tires for Your Vehicle</h2>
+        <h2><svg style="width: 1.5rem; fill: #ff3333; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg> Choosing the Right Tires for Your Vehicle</h2>
         <p>Shane breaks down how to pick tires that match your driving style and budget, ensuring safety and performance.</p>
       </article>
       <article class="blog-post">
-        <h2>Why Wheel Alignment Matters</h2>
+        <h2><svg style="width: 1.5rem; fill: #ff3333; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg> Why Wheel Alignment Matters</h2>
         <p>Learn from our experts why regular alignment checks can extend tire life and improve your ride’s handling.</p>
       </article>
     </div>
